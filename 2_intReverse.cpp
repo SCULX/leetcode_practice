@@ -1,4 +1,4 @@
-ï»¿// é¢˜ç›®é“¾æ¥  https://leetcode.cn/problems/reverse-integer/
+// ÌâÄ¿Á´½Ó  https://leetcode.cn/problems/reverse-integer/
 #include<cstdio>
 #include<limits>
 using namespace std;
@@ -6,12 +6,12 @@ using namespace std;
 int reverse(int x) {
 	int ans = 0;
 	/*
-	* å–åæ“ä½œè¿™é‡Œä¹Ÿä¼šå‘ç”Ÿæº¢å‡ºï¼Œå¯¹äº-2147483648å–åï¼Œç›´æ¥æº¢å‡º
-	* å‚è€ƒäº†ç½‘ä¸Šå…³äºå¤„ç†æ­¤ç§é—®é¢˜ä¸‹çš„æº¢å‡º
-	bool flag = false; // xä¸ºè´Ÿæ•°ï¼ˆflag=true);åä¹‹ä¸ºfalse
+	* È¡·´²Ù×÷ÕâÀïÒ²»á·¢ÉúÒç³ö£¬¶ÔÓÚ-2147483648È¡·´£¬Ö±½ÓÒç³ö
+	* ²Î¿¼ÁËÍøÉÏ¹ØÓÚ´¦Àí´ËÖÖÎÊÌâÏÂµÄÒç³ö
+	bool flag = false; // xÎª¸ºÊı£¨flag=true);·´Ö®Îªfalse
 	if (x < 0) {
 		flag = true;
-		x = -x; // å…ˆå–åï¼Œæ–¹ä¾¿ç»Ÿä¸€å¤„ç†
+		x = -x; // ÏÈÈ¡·´£¬·½±ãÍ³Ò»´¦Àí
 
 	}
 	*/
@@ -19,8 +19,8 @@ int reverse(int x) {
 		int low = x % 10;
 		x = x / 10;
 		/*
-		* ä»¥ä¸‹æ–¹æ³•åœ¨leetcodeä¸­å¤„ç†æº¢å‡ºå¤±æ•ˆï¼Œéœ€è¦é‡æ–°è®¾è®¡
-		if (ans * 10 / 10 != ans) return 0;  // å¤„ç†æº¢å‡º
+		* ÒÔÏÂ·½·¨ÔÚleetcodeÖĞ´¦ÀíÒç³öÊ§Ğ§£¬ĞèÒªÖØĞÂÉè¼Æ
+		if (ans * 10 / 10 != ans) return 0;  // ´¦ÀíÒç³ö
 		else {
 			ans = ans * 10 + low;
 		}

@@ -24,5 +24,8 @@
     <ClCompile Include="1_3sum.cpp">
       <Filter>源文件\mid</Filter>
     </ClCompile>
+    <ClCompile Include="2_intReverse.cpp">
+      <Filter>源文件\mid</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

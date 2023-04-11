@@ -27,5 +27,8 @@
     <ClCompile Include="2_intReverse.cpp">
       <Filter>源文件\mid</Filter>
     </ClCompile>
+    <ClCompile Include="3_NConVert.cpp">
+      <Filter>源文件\mid</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

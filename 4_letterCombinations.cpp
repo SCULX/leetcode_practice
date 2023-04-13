@@ -1,4 +1,4 @@
-// ÌâÄ¿Á´½Ó https://leetcode.cn/problems/letter-combinations-of-a-phone-number/
+ï»¿// é¢˜ç›®é“¾æ¥ https://leetcode.cn/problems/letter-combinations-of-a-phone-number/
 
 #include<cstdio>
 #include<string>
@@ -6,7 +6,7 @@
 #include<map>
 using namespace std;
 
-// ×ÖµäĞò
+// å­—å…¸åº
 map<char, string> myPhoneLetter{
 	{'2',"abc"},{'3',"def"},{'4',"ghi"},
 	{'5',"jkl"},{'6',"mno"},{'7',"pqrs"},
@@ -14,22 +14,22 @@ map<char, string> myPhoneLetter{
 };
 
 /*
-* ¸ù¾İ×Ö·û´®ÖĞÊı×ÖÏÈºóË³Ğò£¬¹¹ÔìÊ÷£¬¶ÔÊ÷½øĞĞDFS
+* æ ¹æ®å­—ç¬¦ä¸²ä¸­æ•°å­—å…ˆåé¡ºåºï¼Œæ„é€ æ ‘ï¼Œå¯¹æ ‘è¿›è¡ŒDFS
 */
-string temp;  // Ò»´ÎDFSµÃµ½µÄ×Ö·û´®
+string temp;  // ä¸€æ¬¡DFSå¾—åˆ°çš„å­—ç¬¦ä¸²
 void DFS(vector<string> str,int index,vector<string> & ans) {
-	// µİ¹é±ß½ç
+	// é€’å½’è¾¹ç•Œ
 	if (index == str.size()) {
-		ans.push_back(temp); // ±£´æÃ¿´ÎDFSºóµÄ½á¹û
-		//ÕâÀï»ØËİÎ»ÖÃ²»¶Ô£¬Ö»¿¼ÂÇµ½ÁË×îºóÒ»²ã
-		//temp.pop_back(); // °Ñµ±Ç°µÄ×îºóÒ»¸ö×Ö·ûÈ¥µô,Îª»ØËİµÃµ½ÕıÈ·½á¹û
+		ans.push_back(temp); // ä¿å­˜æ¯æ¬¡DFSåçš„ç»“æœ
+		//è¿™é‡Œå›æº¯ä½ç½®ä¸å¯¹ï¼Œåªè€ƒè™‘åˆ°äº†æœ€åä¸€å±‚
+		//temp.pop_back(); // æŠŠå½“å‰çš„æœ€åä¸€ä¸ªå­—ç¬¦å»æ‰,ä¸ºå›æº¯å¾—åˆ°æ­£ç¡®ç»“æœ
 		return;
 	}
 
 	for (int i = 0; i < str[index].size(); i++) {
-		temp += str[index][i]; // ¼ÓÈë±éÀúÂ·¾¶ÖĞ
-		DFS(str, index + 1, ans); // µİ¹éÊ÷µÄÏÂÒ»²ã
-		temp.pop_back();  // µ±Ç°×Ö·ûÒÑ¾­±éÀúÁË£¬Ó¦¸ÃÊÍ·Å£¬ÈÃÆäÏÂÒ»´ÎÄÜÔÙ´Î±éÀú
+		temp += str[index][i]; // åŠ å…¥éå†è·¯å¾„ä¸­
+		DFS(str, index + 1, ans); // é€’å½’æ ‘çš„ä¸‹ä¸€å±‚
+		temp.pop_back();  // å½“å‰å­—ç¬¦å·²ç»éå†äº†ï¼Œåº”è¯¥é‡Šæ”¾ï¼Œè®©å…¶ä¸‹ä¸€æ¬¡èƒ½å†æ¬¡éå†
 	}
 	return;
 }
@@ -37,7 +37,7 @@ void DFS(vector<string> str,int index,vector<string> & ans) {
 vector<string> letterCombinations(string digits) {
 	int len = digits.length();
 	vector<string> ans;
-	vector<string> charater;  // ±£´æÊı×Ö¶ÔÓ¦µÄ×Ö·û´®
+	vector<string> charater;  // ä¿å­˜æ•°å­—å¯¹åº”çš„å­—ç¬¦ä¸²
 	
 	if (len == 0) return ans;
 	for (int i = 0; i < len; i++) {
@@ -54,7 +54,7 @@ int main() {
 	vector<string> ans;
 
 	string digits = "2";
-	// Ê±¼ä»÷°Ü100%£¬µ«ÄÚ´æ¾ÓÈ»Ö»»÷°Ü10.4%.....
+	// æ—¶é—´å‡»è´¥100%ï¼Œä½†å†…å­˜å±…ç„¶åªå‡»è´¥10.4%.....
 	ans = letterCombinations(digits);
 	for (string str : ans) {
 		printf("%s\n", str.c_str());

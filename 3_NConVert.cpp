@@ -1,4 +1,4 @@
-// ÌâÄ¿Á´½Ó https://leetcode.cn/problems/zigzag-conversion/
+ï»¿// é¢˜ç›®é“¾æ¥ https://leetcode.cn/problems/zigzag-conversion/
 #include<cstdio>
 #include<vector>
 #include<string>
@@ -7,13 +7,13 @@ using namespace std;
 string convert1(string s, int numRows) {
 	int len = s.length();
 	vector<vector<char>> Nstr(numRows,vector<char>(len,' '));
-	vector<vector<int>> flag(numRows,vector<int>(len,0)); // ±ê¼Ç¶şÎ¬Êı×éÖĞÄ³Î»ÊÇ·ñÓĞĞ§
-	int turn = 0;  // ×ªÏò£¨0±íÊ¾ÏòÏÂ£¬1±íÊ¾ÏòÓÒÉÏ£©
+	vector<vector<int>> flag(numRows,vector<int>(len,0)); // æ ‡è®°äºŒç»´æ•°ç»„ä¸­æŸä½æ˜¯å¦æœ‰æ•ˆ
+	int turn = 0;  // è½¬å‘ï¼ˆ0è¡¨ç¤ºå‘ä¸‹ï¼Œ1è¡¨ç¤ºå‘å³ä¸Šï¼‰
 	int row = 0, col = 0;
 	for (int i = 0; i < len; i++) {
 		Nstr[row][col] = s[i];
-		flag[row][col] = 1;  // ´ËÎ»ÓĞĞ§
-		// ÒÔÏÂÁ½¸öifË³Ğò²»¿Éµ÷»»£¬ÕâÀïÖ»ÊÇÔËÓÃÁË³ÌĞòÖ´ĞĞË³ĞòÇÉÃî´¦ÀíÁËnumRows=1µÄÇé¿ö
+		flag[row][col] = 1;  // æ­¤ä½æœ‰æ•ˆ
+		// ä»¥ä¸‹ä¸¤ä¸ªifé¡ºåºä¸å¯è°ƒæ¢ï¼Œè¿™é‡Œåªæ˜¯è¿ç”¨äº†ç¨‹åºæ‰§è¡Œé¡ºåºå·§å¦™å¤„ç†äº†numRows=1çš„æƒ…å†µ
 		if (row == 0) {
 			turn = 0;
 		}
@@ -22,7 +22,7 @@ string convert1(string s, int numRows) {
 		}
 
 		if (turn == 1) {
-			// ÏÂ±ß½ç£¬ĞèÏòÉÏ×ß
+			// ä¸‹è¾¹ç•Œï¼Œéœ€å‘ä¸Šèµ°
 			row = row>0?--row:row;
 			col++;
 		}
@@ -31,7 +31,7 @@ string convert1(string s, int numRows) {
 			row++;
 		}
 	}
-	// ´ËÊ±NstrÖĞÒÑ¾­ÅÅÁĞºÃÁËNĞÍ×Ö·û´®£¬µ«ÊÇĞèÒª×ª»¯Îª×Ö·û´®
+	// æ­¤æ—¶Nsträ¸­å·²ç»æ’åˆ—å¥½äº†Nå‹å­—ç¬¦ä¸²ï¼Œä½†æ˜¯éœ€è¦è½¬åŒ–ä¸ºå­—ç¬¦ä¸²
 	string str = "";
 	for (int i = 0; i < Nstr.size(); i++) {
 		for (int j = 0; j < Nstr[i].size(); j++) {
@@ -43,15 +43,15 @@ string convert1(string s, int numRows) {
 	return str;
 }
 
-// ÀûÓÃNĞÍ¹æÂÉ£¬Ö±½Ó¶¨Î»ÏÂ±ê
+// åˆ©ç”¨Nå‹è§„å¾‹ï¼Œç›´æ¥å®šä½ä¸‹æ ‡
 string convert(string s, int numRows) {
 	/*
-	* ¹æÂÉ£º¢ÙÖÜÆÚT=2*numRows-2
-	* ¢Ú¹¹ÔìµÄ¶şÎ¬Êı×éÖĞµÚÒ»ĞĞµÄÏÂ±ê i = 0 mod T
-	* ¢Û¹¹ÔìµÄ¶şÎ¬Êı×éµÄ×îºóÒ»ĞĞµÄÏÂ±ê i = numRows-1 mod T
-	* ¢ÜÆäÓàÃ¿ĞĞÔÚÒ»¸öÖÜÆÚÄÚÖÁÉÙÓĞ2¸ö×ÖÄ¸¡£
-	* µÚÒ»¸ö×ÖÄ¸µÄi = ĞĞºÅ£¨´Ó0¿ªÊ¼£© mod T
-	* µÚ¶ş¸ö×ÖÄ¸µÄi = T-ĞĞºÅ mod T
+	* è§„å¾‹ï¼šâ‘ å‘¨æœŸT=2*numRows-2
+	* â‘¡æ„é€ çš„äºŒç»´æ•°ç»„ä¸­ç¬¬ä¸€è¡Œçš„ä¸‹æ ‡ i = 0 mod T
+	* â‘¢æ„é€ çš„äºŒç»´æ•°ç»„çš„æœ€åä¸€è¡Œçš„ä¸‹æ ‡ i = numRows-1 mod T
+	* â‘£å…¶ä½™æ¯è¡Œåœ¨ä¸€ä¸ªå‘¨æœŸå†…è‡³å°‘æœ‰2ä¸ªå­—æ¯ã€‚
+	* ç¬¬ä¸€ä¸ªå­—æ¯çš„i = è¡Œå·ï¼ˆä»0å¼€å§‹ï¼‰ mod T
+	* ç¬¬äºŒä¸ªå­—æ¯çš„i = T-è¡Œå· mod T
 	*/
 	int T = 2 * numRows - 2;
 	int len = s.length();
@@ -59,15 +59,15 @@ string convert(string s, int numRows) {
 	if (numRows == 1 || len <= numRows) {
 		return s;
 	}
-	string ans; // ×ª»¯ºóµÄ×Ö·û´®
+	string ans; // è½¬åŒ–åçš„å­—ç¬¦ä¸²
 
 	for (int index = 0; index < numRows; ++index) {
-		// Ã¿¸öÖÜÆÚÒÀ´Î¼ÓÈë
+		// æ¯ä¸ªå‘¨æœŸä¾æ¬¡åŠ å…¥
 		for (int i = 0; i +index< len; i += T ) {
-			ans += s[i + index];  // µ±Ç°ÖÜÆÚµÚÒ»¸ö×Ö·û
+			ans += s[i + index];  // å½“å‰å‘¨æœŸç¬¬ä¸€ä¸ªå­—ç¬¦
 			if (index > 0 && index < numRows - 1 && i + T - index < len) {
-				// ³ıÁËµÚÒ»ĞĞ£¬×îºóÒ»ĞĞÍâ£¬ÖĞ¼äĞĞÖÁÉÙÓĞ2¸ö×Ö·û
-				ans += s[i + T - index]; // µ±Ç°ÖÜÆÚµÄµÚ¶ş¸ö×Ö·û
+				// é™¤äº†ç¬¬ä¸€è¡Œï¼Œæœ€åä¸€è¡Œå¤–ï¼Œä¸­é—´è¡Œè‡³å°‘æœ‰2ä¸ªå­—ç¬¦
+				ans += s[i + T - index]; // å½“å‰å‘¨æœŸçš„ç¬¬äºŒä¸ªå­—ç¬¦
 			}
 		}
 	}
@@ -79,10 +79,10 @@ int main() {
 
 	string s = "PAYPALISHIRING";
 	int numRows = 3;
-	// Ä£ÄâÒ»±é£¬²Å»÷°Ü5%.....
+	// æ¨¡æ‹Ÿä¸€éï¼Œæ‰å‡»è´¥5%.....
 	string ans1 = convert1(s, numRows);
 
-	// ÊıÑ§°ì·¨»÷°ÜÁË80%ÒÔÉÏ
+	// æ•°å­¦åŠæ³•å‡»è´¥äº†80%ä»¥ä¸Š
 	string ans = convert(s, numRows);
 	printf("%s\n", ans.c_str());
 	return 0;

@@ -1,0 +1,2 @@
+D:\MyVSOwn_project\LeetCodeStudy\Debug\LeetCodeStudy.exe
+D:\MyVSOwn_project\LeetCodeStudy\Debug\LeetCodeStudy.pdb

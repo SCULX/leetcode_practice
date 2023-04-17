@@ -1,4 +1,4 @@
-// ÌâÄ¿Á´½Ó https://leetcode.cn/problems/generate-parentheses/
+ï»¿// é¢˜ç›®é“¾æ¥ https://leetcode.cn/problems/generate-parentheses/
 
 #include<cstdio>
 #include<string>
@@ -7,37 +7,37 @@
 using namespace std;
 
 /*
-* Ë¼Â·£º£¨½è¼øÁËÍøÉÏ¾­Ñé£©ÈçºÎÔÚ»ØËİËã·¨ÖĞÅĞ¶ÏÀ¨ºÅÊÇ·ñÅä¶Ô£¿
-* ÈôtempÊÇÒ»¸öºÏÀíµÄÀ¨ºÅ×éºÏ£¬ÔòtempµÄÈÎºÎ×Ó´®£¬¼´temp[0....i]ÖĞ×óÀ¨ºÅÊıÁ¿>= ÓÒÀ¨ºÅÊıÁ¿
-* leftCount:×óÀ¨ºÅÊıÁ¿
-* rightCount:ÓÒÀ¨ºÅÊıÁ¿
-* temp:Ã¿ÌõÂ·¾¶¹¹ÔìµÄÀ¨ºÅ×éºÏ
-* ans:×ÜµÄÀ¨ºÅ×éºÏÇé¿ö
+* æ€è·¯ï¼šï¼ˆå€Ÿé‰´äº†ç½‘ä¸Šç»éªŒï¼‰å¦‚ä½•åœ¨å›æº¯ç®—æ³•ä¸­åˆ¤æ–­æ‹¬å·æ˜¯å¦é…å¯¹ï¼Ÿ
+* è‹¥tempæ˜¯ä¸€ä¸ªåˆç†çš„æ‹¬å·ç»„åˆï¼Œåˆ™tempçš„ä»»ä½•å­ä¸²ï¼Œå³temp[0....i]ä¸­å·¦æ‹¬å·æ•°é‡>= å³æ‹¬å·æ•°é‡
+* leftCount:å·¦æ‹¬å·æ•°é‡
+* rightCount:å³æ‹¬å·æ•°é‡
+* temp:æ¯æ¡è·¯å¾„æ„é€ çš„æ‹¬å·ç»„åˆ
+* ans:æ€»çš„æ‹¬å·ç»„åˆæƒ…å†µ
 */
 void DFS(int leftCount, int rightCount, string& temp, vector<string>& ans) {
-	// ÓÒÀ¨ºÅÊıÁ¿¶àÓÚ×óÀ¨ºÅ£¬ËµÃ÷²»ºÏ·¨
+	// å³æ‹¬å·æ•°é‡å¤šäºå·¦æ‹¬å·ï¼Œè¯´æ˜ä¸åˆæ³•
 	if (rightCount < leftCount) return;
 	if (leftCount < 0 || rightCount < 0) return;
 	if (leftCount == 0 && rightCount == 0) {
-		ans.push_back(temp); // Éú³ÉµÄÒ»ÖÖ×éºÏ
+		ans.push_back(temp); // ç”Ÿæˆçš„ä¸€ç§ç»„åˆ
 		return;
 	}
 
-	temp.push_back('('); // ³¢ÊÔ·ÅÒ»¸ö×óÀ¨ºÅ
+	temp.push_back('('); // å°è¯•æ”¾ä¸€ä¸ªå·¦æ‹¬å·
 	DFS(leftCount - 1, rightCount, temp, ans);
-	temp.pop_back();  // ³·Ïú´Ë´ÎÑ¡Ôñ
+	temp.pop_back();  // æ’¤é”€æ­¤æ¬¡é€‰æ‹©
 
-	temp.push_back(')'); // ³¢ÊÔ·ÅÒ»¸öÓÒÀ¨ºÅ
+	temp.push_back(')'); // å°è¯•æ”¾ä¸€ä¸ªå³æ‹¬å·
 	DFS(leftCount, rightCount - 1, temp, ans);
-	temp.pop_back();  // ³·Ïú´Ë´ÎÑ¡Ôñ
+	temp.pop_back();  // æ’¤é”€æ­¤æ¬¡é€‰æ‹©
 }
 
 vector<string> generateParenthesis(int n) {
-	vector<string> ans; // Éú³ÉµÄÀ¨ºÅÅä¶Ô×éºÏ
-	string temp;  // Ã¿ÖÖ×éºÏ
+	vector<string> ans; // ç”Ÿæˆçš„æ‹¬å·é…å¯¹ç»„åˆ
+	string temp;  // æ¯ç§ç»„åˆ
 
 	if (n == 0) return ans;
-	DFS(n, n, temp, ans); // ×óÀ¨ºÅºÍÓÒÀ¨ºÅÊıÁ¿¶¼Îªn
+	DFS(n, n, temp, ans); // å·¦æ‹¬å·å’Œå³æ‹¬å·æ•°é‡éƒ½ä¸ºn
 	return ans;
 }
 

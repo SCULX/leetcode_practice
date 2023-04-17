@@ -1,33 +1,33 @@
-// ÌâÄ¿Á´½Ó https ://leetcode.cn/problems/3sum/
+ï»¿// é¢˜ç›®é“¾æ¥ https ://leetcode.cn/problems/3sum/
 #include<cstdio>
 #include<vector>
 #include<algorithm>
 using namespace std;
 
 vector<vector<int>> threeSum(vector<int>& nums) {
-	sort(nums.begin(), nums.end());  // ´ÓĞ¡µ½´óÅÅĞò£¬·½±ãË«Ö¸Õë
+	sort(nums.begin(), nums.end());  // ä»å°åˆ°å¤§æ’åºï¼Œæ–¹ä¾¿åŒæŒ‡é’ˆ
 	int len = nums.size();
-	vector<vector<int>> ans;  // ´æ´¢½á¹û
+	vector<vector<int>> ans;  // å­˜å‚¨ç»“æœ
 	if (len < 3) return ans;
 	else {
 		for (int i = 0; i < len - 1; i++) {
 			int low = i + 1, high = len - 1;
 			if (nums[i] > 0) break;
-			if (i > 0 && nums[i] == nums[i - 1]) continue;  // È¥µôÖØ¸´²Ù×÷
+			if (i > 0 && nums[i] == nums[i - 1]) continue;  // å»æ‰é‡å¤æ“ä½œ
 			while (low < high) {
 				int sum = nums[i] + nums[low] + nums[high];
 				if (sum == 0) {
 					ans.push_back({ nums[i],nums[low],nums[high] });
 					while (low < high && nums[low] == nums[low + 1]) low++;
 					while (low < high && nums[high] == nums[high - 1]) high--;
-					low++; // È¥ÖØÖ®ºóÖ¸ÏòµÄµ±Ç°Î»ÖÃ
-					high--;  // È¥ÖØÖ®ºóÖ¸ÏòµÄµ±Ç°Î»ÖÃ
+					low++; // å»é‡ä¹‹åæŒ‡å‘çš„å½“å‰ä½ç½®
+					high--;  // å»é‡ä¹‹åæŒ‡å‘çš„å½“å‰ä½ç½®
 				}
 				else if (sum > 0) {
-					high--; // ºÍÌ«´ó£¬Ó¦¸ÃÍù×óÒÆ
+					high--; // å’Œå¤ªå¤§ï¼Œåº”è¯¥å¾€å·¦ç§»
 				}
 				else {
-					low++; // ºÍÌ«Ğ¡£¬Ó¦¸ÃÍùÓÒÒÆ
+					low++; // å’Œå¤ªå°ï¼Œåº”è¯¥å¾€å³ç§»
 				}
 			}
 		}

@@ -39,5 +39,8 @@
     <ClCompile Include="6_combinationSum.cpp">
       <Filter>源文件\mid</Filter>
     </ClCompile>
+    <ClCompile Include="7_nextPermutation.cpp">
+      <Filter>源文件\mid</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

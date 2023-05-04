@@ -48,5 +48,8 @@
     <ClCompile Include="9_swapPairs.cpp">
       <Filter>源文件\mid</Filter>
     </ClCompile>
+    <ClCompile Include="10_strStr.cpp">
+      <Filter>源文件\mid</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

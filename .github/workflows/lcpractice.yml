@@ -20,7 +20,8 @@ jobs:
       - name: test somefiles
         run: |
           sudo apt-get update
-          sudo apt-get install wine32
+          sudo apt-get install wine
+          wine --version
           cd leetcode_practice
           ls
           wine 6_combinationSum.exe

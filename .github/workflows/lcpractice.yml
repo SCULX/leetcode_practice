@@ -1,0 +1,14 @@
+﻿name: lcpractice
+on: workflow_dispatch
+
+jobs:
+
+  lcpractice:
+    runs-on: ubuntu-latest
+	steps:
+	  - name: clone repository
+	    run: |
+		  git clone https://github.com/SCULX/leetcode_practice/tree/makepipi
+		  cd leetcode_practice
+      - name: run lcpractice
+	    run: make

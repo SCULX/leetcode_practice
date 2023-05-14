@@ -9,7 +9,6 @@ jobs:
         run: |
           git clone https://github.com/SCULX/leetcode_practice 
           cd leetcode_practice 
-          ls
       - name: install g++ make enviroment
         run: |
           sudo apt-get update
@@ -17,5 +16,11 @@ jobs:
       - name: run lcpractice 
         run: |
           cd leetcode_practice
-          ls
           make 
+      - name: test somefiles
+        run: |
+          ls
+          6_combinationSum
+          11_search
+      - name: clean unused files
+        run: make cleanlin

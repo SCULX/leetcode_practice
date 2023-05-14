@@ -2,7 +2,6 @@
 on: workflow_dispatch
 
 jobs:
-
   lcpractice:
     runs-on: ubuntu-latest
 	steps:

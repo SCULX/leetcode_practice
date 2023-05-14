@@ -3,6 +3,7 @@
 #include<cstdio>
 #include <utility>
 #include<string>
+#include<climits>
 using namespace std;
 
 // 求a/b的商

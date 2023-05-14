@@ -1,6 +1,7 @@
 ﻿// 题目链接  https://leetcode.cn/problems/reverse-integer/
 #include<cstdio>
 #include<limits>
+#include<climits>
 using namespace std;
 
 int reverse(int x) {

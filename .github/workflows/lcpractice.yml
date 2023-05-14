@@ -3,7 +3,7 @@ on: workflow_dispatch
 
 jobs:
   lcpractice:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 	steps:
 	  - name: clone repository
 	    run: |

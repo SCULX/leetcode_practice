@@ -24,4 +24,4 @@ cleanwin:
 	del *.o $(TARGET)
 
 cleanlin:
-	rm *.o $(TARGET)
+	rm  $(TARGET)

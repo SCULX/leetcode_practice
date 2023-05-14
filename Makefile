@@ -12,7 +12,7 @@ CXXFLAGS = -c -Wall
 
 # 按次序生成依赖
 $(ALL): $(TARGET)
-	@echo It's buiding...
+	@echo Its buiding...
 
 %.exe: %.o
 	$(CXX) -o $@  $<

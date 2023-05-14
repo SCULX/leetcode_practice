@@ -21,8 +21,8 @@ jobs:
         run: |
           cd leetcode_practice
           ls
-          6_combinationSum
-          11_search
+          ./6_combinationSum
+          ./11_search
       - name: clean unused files
         run: |
           cd leetcode_practice

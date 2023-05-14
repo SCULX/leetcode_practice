@@ -17,10 +17,12 @@ jobs:
         run: |
           cd leetcode_practice
           make 
+     # 无法测试，因目前无法解决linux上安装wine各种问题
       - name: test somefiles
         run: |
+          cd leetcode_practice
           ls
-          6_combinationSum
-          11_search
       - name: clean unused files
-        run: make cleanlin
+        run: |
+          cd leetcode_practice
+          make cleanlin

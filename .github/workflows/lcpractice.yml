@@ -21,8 +21,9 @@ jobs:
         run: |
           cd leetcode_practice
           ls
-          ./6_combinationSum
-          ./11_search
+          sudo apt intall wine-stable
+          wine 6_combinationSum.exe
+          wine 11_search.exe
       - name: clean unused files
         run: |
           cd leetcode_practice

@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: clone repository 
         run: |
-          git clone https://github.com/SCULX/leetcode_practice/tree/makepipi 
+          git clone https://github.com/SCULX/leetcode_practice 
           cd leetcode_practice 
       - name: run lcpractice 
         run: make 

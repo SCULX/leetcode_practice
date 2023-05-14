@@ -16,6 +16,7 @@ jobs:
       - name: run lcpractice 
         run: |
           cd leetcode_practice
+          ls
           make 
       - name: test somefiles
         run: |

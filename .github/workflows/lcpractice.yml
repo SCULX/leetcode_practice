@@ -9,5 +9,7 @@ jobs:
         run: |
           git clone https://github.com/SCULX/leetcode_practice 
           cd leetcode_practice 
+      - name: install g++ make enviroment
+        run: yum install gcc gcc-c++ autoconf automake 
       - name: run lcpractice 
         run: make 

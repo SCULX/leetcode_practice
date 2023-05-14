@@ -54,5 +54,8 @@
     <ClCompile Include="11_search.cpp">
       <Filter>源文件\mid</Filter>
     </ClCompile>
+    <ClCompile Include="Makefile">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -14,4 +14,13 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y build-essential 
       - name: run lcpractice 
-        run: make 
+        run: |
+          cd leetcode_practice
+          make 
+      - name: test somefiles
+        run: |
+          ls
+          6_combinationSum
+          11_search
+      - name: clean unused files
+        run: make cleanlin

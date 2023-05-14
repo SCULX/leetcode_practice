@@ -21,3 +21,6 @@ ls
 hello
 ```
 4. Finally, if running on a Windows platform, you may need to use the `make cleanwin` command to clear all exe files. Whereas on Linux , please use the `make cleanlin`
+
+## Attention
+For the official requirement that the `Github Action` can only run the workflow of the main branch, please go to the `main` branch for the `workflow` process.

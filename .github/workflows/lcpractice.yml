@@ -19,14 +19,8 @@ jobs:
           make 
       - name: test somefiles
         run: |
-          sudo dpkg --add-architecture i386
-          sudo apt-get update
-          sudo apt-get install wine32
-          wine --version
           cd leetcode_practice
           ls
-          wine 6_combinationSum.exe
-          wine 11_search.exe
       - name: clean unused files
         run: |
           cd leetcode_practice

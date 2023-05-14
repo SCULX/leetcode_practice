@@ -57,5 +57,8 @@
     <ClCompile Include="Makefile">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="12_permute.cpp">
+      <Filter>源文件\mid</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

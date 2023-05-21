@@ -63,5 +63,8 @@
     <ClCompile Include="13_spiralOrder.cpp">
       <Filter>源文件\mid</Filter>
     </ClCompile>
+    <ClCompile Include="14_generateMatrix.cpp">
+      <Filter>源文件\mid</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

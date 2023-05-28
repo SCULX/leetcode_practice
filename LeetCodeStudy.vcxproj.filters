@@ -57,5 +57,20 @@
     <ClCompile Include="Makefile">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="12_permute.cpp">
+      <Filter>源文件\mid</Filter>
+    </ClCompile>
+    <ClCompile Include="13_spiralOrder.cpp">
+      <Filter>源文件\mid</Filter>
+    </ClCompile>
+    <ClCompile Include="14_generateMatrix.cpp">
+      <Filter>源文件\mid</Filter>
+    </ClCompile>
+    <ClCompile Include="15_fourSum.cpp">
+      <Filter>源文件\mid</Filter>
+    </ClCompile>
+    <ClCompile Include="16_threeSumClosest.cpp">
+      <Filter>源文件\mid</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

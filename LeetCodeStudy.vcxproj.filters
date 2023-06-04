@@ -72,5 +72,8 @@
     <ClCompile Include="16_threeSumClosest.cpp">
       <Filter>源文件\mid</Filter>
     </ClCompile>
+    <ClCompile Include="17_longestPalindrome.cpp">
+      <Filter>源文件\mid</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

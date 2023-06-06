@@ -81,5 +81,8 @@
     <ClCompile Include="19_searchRange.cpp">
       <Filter>源文件\mid</Filter>
     </ClCompile>
+    <ClCompile Include="20_isValidSudoku.cpp">
+      <Filter>源文件\mid</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

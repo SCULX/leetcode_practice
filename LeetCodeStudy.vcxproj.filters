@@ -93,5 +93,8 @@
     <ClCompile Include="23_multiply.cpp">
       <Filter>源文件\mid</Filter>
     </ClCompile>
+    <ClCompile Include="24_jump.cpp">
+      <Filter>源文件\mid</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

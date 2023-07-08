@@ -102,5 +102,8 @@
     <ClCompile Include="26_jump2.cpp">
       <Filter>源文件\mid</Filter>
     </ClCompile>
+    <ClCompile Include="27_permuteUnique.cpp">
+      <Filter>源文件\mid</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

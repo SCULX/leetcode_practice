@@ -57,7 +57,7 @@ int main() {
 	vector<int> nums = {1,2,3};
 	vector<vector<int>> ans;
 	ans = permuteUnique(nums);
-
+	
 	for (int i = 0; i < ans.size(); i++) {
 		for (int j = 0; j < ans[i].size(); j++) {
 			printf("%d ", ans[i][j]);

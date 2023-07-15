@@ -2,6 +2,7 @@
 
 #include<cstdio>
 #include<algorithm>
+#include<climits>
 using namespace std;
 
 // -----myPow1()无法通过所有测试用例，通过算法详见myPow()-----

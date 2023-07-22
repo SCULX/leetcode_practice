@@ -114,5 +114,8 @@
     <ClCompile Include="30_maxSubArray.cpp">
       <Filter>源文件\mid</Filter>
     </ClCompile>
+    <ClCompile Include="31_merge.cpp">
+      <Filter>源文件\mid</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

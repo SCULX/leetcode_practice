@@ -1,5 +1,11 @@
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/SCULX/leetcode_practice/lcpractice.yml?logo=buddy&link=https%3A%2F%2Fgithub.com%2FSCULX%2Fleetcode_practice%2Factions%2Fworkflows%2Flcpractice.yml)
 
+![GitHub issues](https://img.shields.io/github/issues/SCULX/leetcode_practice?logo=chatbot)
+
+![GitHub repo size](https://img.shields.io/github/repo-size/SCULX/leetcode_practice)
+
+
+
 
 # leetcode_practice
 Use leetcode to learn algorithms

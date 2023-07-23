@@ -1,3 +1,5 @@
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/SCULX/leetcode_practice/lcpractice.yml)
+
 # leetcode_practice
 Use leetcode to learn algorithms
 

@@ -123,5 +123,8 @@
     <ClCompile Include="33_rotateRight.cpp">
       <Filter>源文件\mid</Filter>
     </ClCompile>
+    <ClCompile Include="34_uniquePaths.cpp">
+      <Filter>源文件\mid</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

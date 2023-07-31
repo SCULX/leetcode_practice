@@ -1,7 +1,7 @@
-# ±äÁ¿¶¨Òå
+# å˜é‡å®šä¹‰
 CXX = g++
 ALL = lcpractice
-# ×Ô¶¯¼ìË÷µ¥Ç°Ä¿Â¼ÏÂËùÓÐcppÎÄ¼þ
+# è‡ªåŠ¨æ£€ç´¢å•å‰ç›®å½•ä¸‹æ‰€æœ‰cppæ–‡ä»¶
 SRCS = $(wildcard *.cpp)
 OBJS = $(patsubst %.cpp, %.o, $(SRCS))
 TARGET = $(patsubst %.o, %.exe, $(OBJS))
@@ -10,7 +10,7 @@ CXXFLAGS = -c -Wall
 
 .PHONY: cleanwin cleanlin
 
-# °´´ÎÐòÉú³ÉÒÀÀµ
+# æŒ‰æ¬¡åºç”Ÿæˆä¾èµ–
 $(ALL): $(TARGET)
 	@echo Its buiding...
 

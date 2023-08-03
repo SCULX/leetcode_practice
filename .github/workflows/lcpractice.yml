@@ -8,7 +8,7 @@ jobs:
       - name: clone repository 
         run: |
           git clone https://github.com/SCULX/leetcode_practice 
-          cd leetcode_practice/mid 
+          cd leetcode_practice 
       - name: install g++ make enviroment
         run: |
           sudo apt-get update
@@ -20,7 +20,7 @@ jobs:
       # 无法进行测试，因为目前无法解决在linux安装运行exe的wine
       - name: test somefiles
         run: |
-          cd leetcode_practice
+          cd leetcode_practice/mid/bin
           ls
       - name: clean unused files
         run: |

@@ -26,5 +26,3 @@ jobs:
         run: |
           cd leetcode_practice
           make cleanlin
-          cd mid/bin
-          ls

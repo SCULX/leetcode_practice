@@ -1,9 +1,11 @@
 # 变量定义
 CXX = g++
 ALL = lcpractice
+
+# 自定义编译文件存放目录
 IDIR = mid
 LDIR = bin
-# 自动检索当前目录下所有cpp文件
+OBJDIRS := $(shell mkdir -p $(IDIR)/$(LDIR))
 SRCS = $(wildcard $(IDIR)/*.cpp)
 OBJS = $(patsubst $(IDIR)/%.cpp, $(IDIR)/$(LDIR)/%.o, $(SRCS))
 TARGET = $(patsubst %.o, %.exe, $(OBJS))
